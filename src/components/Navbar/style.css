@@ -29,10 +29,26 @@
     color: #565673;
     font-weight: 100;
     font-size: 16px;
-    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
-.search{
+.search form{
     display: flex;
-    margin: 0 10px;
+    margin: 0 20px;
 }
+
+.searchIput{
+    border: 0;
+    width: 0;
+    transition: width 0.5s ease-in;
+}
+
+.searchIput active{
+    width: 120px;
+}
+
+.searchIput:focus{
+   outline: none;
+}
+
