@@ -16,10 +16,10 @@ function App() {
       <Header/>
       <Hero/>
 
-      <Route path='/' component={Home}/>
-      <Route path='/' component={About}/>
-      <Route path='/' component={Post}/>
-      <Route path='/' component={ContactUs}/>
+      <Route path='/' exact component={Home}/>
+      <Route path='/About' component={About}/>
+      <Route path='/Post' component={Post}/>
+      <Route path='/ContactUs' component={ContactUs}/>
 
      </div>
     </Router>

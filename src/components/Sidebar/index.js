@@ -9,9 +9,27 @@ import Card from '../UI/Card'
 
 const Sidebar = (props) => {
     return (
-        <Card width='27%'>
-            Sidebar
-        </Card>
+        <div className='sidebarContainer'>
+            <Card style={{ marginBottom: '20px' }}>
+                <div className='cardHeader'>
+                    <span>About-Us</span>
+                </div>
+                <div className='profileImage'>
+                    <img src={require("../../Data/BlogPostImages/phototwo.jpg")} alt='post image' />
+                </div>
+                <div className='cardBody'>
+                    <p className='PersonalBio'>Meh synth Schlitz, tempor duis single-origin coffee ea
+                         next level ethnic fingerstache fanny pack nostrud. Photo booth
+                         anim 8-bit hella, PBR 3 wolf moon beard Helvetica.</p>
+                </div>
+            </Card>
+
+            <Card>
+                <div className='cardHeader'>
+                    <span>Social Network</span>
+                </div>
+            </Card>
+        </div>
     )
 
 }
