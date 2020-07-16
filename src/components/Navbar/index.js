@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './style.css'
+import {NavLink} from 'react-router-dom'
 import { FaSearch } from 'react-icons/fa';
 
 export default function Navbar(props) {
@@ -23,10 +24,10 @@ export default function Navbar(props) {
     return (
         <div className='navbar'>
             <ul className='navbarMenu'>
-               <li><a href='#'>Home</a></li>
-               <li><a href='#'>About Us</a></li>
-               <li><a href='#'>Contact us</a></li>
-               <li><a href='#'>Posts</a></li>
+               <li><NavLink to='/'>Home</NavLink></li>
+               <li><NavLink to='/About'>About Us</NavLink></li>
+               <li><NavLink to='/ContactUs'>Contact us</NavLink></li>
+               <li><NavLink to='/Post'>Posts</NavLink></li>
             </ul>
             <div className='search'>
                 <form onSubmit={submitSearch}>
