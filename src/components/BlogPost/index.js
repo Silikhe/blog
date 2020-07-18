@@ -1,8 +1,23 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import './style.css'
 import Card from '../UI/Card'
+import blogPost from '../../Data/blog.json'
 // import blogImage from '../../Data/BlogPostImages'
-export default function BlogPost() {
+
+
+ /**
+ * @author
+ * @function BlogPost
+ **/
+
+ const BlogPost = (props) => {
+
+
+    useEffect(()=>{
+        const postId = props.match.params.postId;
+        blogPost.
+        console.log(Data)
+    })
     return (
         <div className='blogPostContainer'>
             <Card>
@@ -24,4 +39,7 @@ export default function BlogPost() {
             </Card>
         </div>
     )
-}
+
+  }
+
+ export default BlogPost
