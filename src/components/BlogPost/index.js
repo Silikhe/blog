@@ -13,6 +13,7 @@ import blogPost from '../../Data/blog.json'
  const BlogPost = (props) => {
      const [post, setPost] = useState({});
 
+    //  const postId = props.match.params.postId;
 
     useEffect(()=>{
         const postId = props.match.params.postId;
@@ -26,7 +27,7 @@ import blogPost from '../../Data/blog.json'
             <Card>
                 <div className='blogHeader'>
                     <span className='blogCategory'>Feature</span>
-    <h1 className='postTitle'>Silas{post.blogTitle}</h1>
+    <h1 className='postTitle'>{post.blogTitle}</h1>
                     <span className='postedBy'>posted on July 21, 2020 by Silas Silikhe Blog</span>
                 </div>
                 <div className='postImageContainer'>

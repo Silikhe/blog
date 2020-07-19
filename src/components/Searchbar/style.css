@@ -1,0 +1,27 @@
+
+.iconContainer{
+    background: #333333;
+    width: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.icon{
+    color: #fff;
+    font-weight: 100;
+    font-size: 18px;
+    /* margin-left: 5px; */
+    cursor: pointer;
+}
+
+.search form{
+    display: flex;
+    margin: 0 20px;
+}
+
+.search input{
+    padding: 5px;
+    border: 2px solid #1A365D;
+    width: 180px;
+}

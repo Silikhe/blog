@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
 import Card from '../UI/Card'
+import Searchbar from '../Searchbar'
 
 /**
 * @author
@@ -10,6 +11,7 @@ import Card from '../UI/Card'
 const Sidebar = (props) => {
     return (
         <div className='sidebarContainer'>
+            <Searchbar/>
             <Card style={{ marginBottom: '20px' }}>
                 <div className='cardHeader'>
                     <span>About-Us</span>

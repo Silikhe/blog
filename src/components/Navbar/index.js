@@ -29,12 +29,6 @@ export default function Navbar(props) {
                <li><NavLink to='/ContactUs'>Contact us</NavLink></li>
                <li><NavLink to='/Post'>Posts</NavLink></li>
             </ul>
-            <div className='search'>
-                <form onSubmit={submitSearch}>
-                <input className={searchClass}  type='text' placeholder='Search'/>
-                <FaSearch onClick={openSearch} className='icon'/>
-                </form>
-            </div>
         </div>
     )
 }
