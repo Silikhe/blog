@@ -2,7 +2,6 @@ import React,{useState, useEffect} from 'react'
 import './style.css'
 import Card from '../UI/Card'
 import blogPost from '../../Data/blog.json'
-// import blogImage from '../../Data/BlogPostImages'
 
 
  /**
@@ -13,15 +12,13 @@ import blogPost from '../../Data/blog.json'
  const BlogPost = (props) => {
      const [post, setPost] = useState({});
 
-    //  const postId = props.match.params.postId;
-
     useEffect(()=>{
         const postId = props.match.params.postId;
         const post = blogPost.data.find( post => post.id == postId)
         setPost(post);
          console.log(blogPost.data.find(post => post.id))
          console.log("hereee",post.blogTitle)
-    })
+    }, post);
     return (
         <div className='blogPostContainer'>
             <Card>
