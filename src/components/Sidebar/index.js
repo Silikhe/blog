@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import './style.css'
 import Card from '../UI/Card'
 import Searchbar from '../Searchbar'
 import blogPost from '../../Data/blog.json'
+import { NavLink } from 'react-router-dom'
 /**
 * @author
 * @function Sidebar
@@ -13,7 +14,7 @@ const Sidebar = (props) => {
 
     useEffect(() => {
         const posts = blogPost.data
-        setPost(posts);
+        setPosts(posts);
     }, posts);
     return (
         <div className='sidebarContainer'>
@@ -43,24 +44,29 @@ const Sidebar = (props) => {
                     <span>Recent Posts</span>
                 </div>
                 <div className='recentPosts'>
-                    <div className='recentPost'>
-                        <h3>Post Title</h3>
-                        <span>July, 03,1999</span>
-                    </div>
-                    <div className='recentPost'>
-                        <h3>Post Title</h3>
-                        <span>July, 03,1999</span>
-                    </div>
-                    <div className='recentPost'>
-                        <h3>Post Title</h3>
-                        <span>July, 03,1999</span>
-                    </div>
+
                     {
                         posts.map(post => {
-                            <div className='recentPost'>
-                                <h3>post</h3>
-                                <span>July, 03,1999</span>
-                            </div>
+                            return (
+                                <NavLink to={"/post/${/post.id}"}>
+                                    <div className='recentPost'>
+                                        <h3>{post.postTitle}</h3>
+                                        <span>{post.postedOn}</span>
+                                    </div>
+                                </NavLink>
+                            )
+                        })
+                    }
+                    {
+                        posts.map(post => {
+                            return (
+                                <NavLink to={"/post/${/post.id}"}>
+                                    <div className='recentPost'>
+                                        <h3>{post.postTitle}</h3>
+                                        <span>{post.postedOn}</span>
+                                    </div>
+                                </NavLink>
+                            )
                         })
                     }
                 </div>
