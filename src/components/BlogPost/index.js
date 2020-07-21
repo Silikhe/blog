@@ -10,32 +10,45 @@ import blogPost from '../../Data/blog.json'
  **/
 
  const BlogPost = (props) => {
-     const [post, setPost] = useState({});
+     const [post, setPost] = useState({
+
+            id:"",
+            blogCategory:"",
+            blogTitle:"",
+            slug:"",
+            postedOn:"",
+            author:"",
+            blogImage:"",
+            blogText:""
+
+     });
+     const [postId, setPostId] = useState("");
+
+
 
     useEffect(()=>{
         const postId = props.match.params.postId;
         const post = blogPost.data.find( post => post.id == postId)
         setPost(post);
-         console.log(blogPost.data.find(post => post.id))
-         console.log("hereee",post.blogTitle)
-    }, post);
+        setPostId(postId)
+        }, post, props.match.params.postId);
+
+        if(post.blogImage == "") return null;
+
     return (
         <div className='blogPostContainer'>
             <Card>
                 <div className='blogHeader'>
-                    <span className='blogCategory'>Feature</span>
+    <span className='blogCategory'>{post.blogCartegory}</span>
     <h1 className='postTitle'>{post.blogTitle}</h1>
-                    <span className='postedBy'>posted on July 21, 2020 by Silas Silikhe Blog</span>
+                    <span className='postedBy'>posted on {post.postedOn} by {post.author}</span>
                 </div>
                 <div className='postImageContainer'>
-                    <img src={require("../../Data/BlogPostImages/photofour.jpg")} alt='post image'/>
+                    <img src={require("../../Data/BlogPostImages/"+post.blogImage)} alt='post image'/>
                 </div>
                 <div className='postContent'>
-                    <h3>Post Title</h3>
-                    <p>lorem What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting
-                         industry Lorem Ipsum has been the industry's standard dummy text ever since
-                         the 1500s when an unknown printer took a galley of type and scrambled it to make a type
-                         specimen book it has?</p>
+    <h3>{post.blogTitle}</h3>
+    <p>{post.blogText}</p>
                 </div>
             </Card>
         </div>

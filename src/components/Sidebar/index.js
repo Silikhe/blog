@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './style.css'
 import Card from '../UI/Card'
 import Searchbar from '../Searchbar'
@@ -16,6 +16,7 @@ const Sidebar = (props) => {
         const posts = blogPost.data
         setPosts(posts);
     }, posts);
+
     return (
         <div className='sidebarContainer'>
             <Searchbar />
@@ -48,27 +49,16 @@ const Sidebar = (props) => {
                     {
                         posts.map(post => {
                             return (
-                                <NavLink to={"/post/${/post.id}"}>
+                                <NavLink to={`/post/${post.id}`}>
                                     <div className='recentPost'>
-                                        <h3>{post.postTitle}</h3>
+                                        <h3>{post.blogTitle}</h3>
                                         <span>{post.postedOn}</span>
                                     </div>
                                 </NavLink>
                             )
                         })
                     }
-                    {
-                        posts.map(post => {
-                            return (
-                                <NavLink to={"/post/${/post.id}"}>
-                                    <div className='recentPost'>
-                                        <h3>{post.postTitle}</h3>
-                                        <span>{post.postedOn}</span>
-                                    </div>
-                                </NavLink>
-                            )
-                        })
-                    }
+
                 </div>
             </Card>
         </div>
