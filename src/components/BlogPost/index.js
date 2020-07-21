@@ -31,7 +31,7 @@ import blogPost from '../../Data/blog.json'
         const post = blogPost.data.find( post => post.id == postId)
         setPost(post);
         setPostId(postId)
-        }, post, props.match.params.postId);
+        }, [post, props.match.params.postId]);
 
         if(post.blogImage == "") return null;
 
