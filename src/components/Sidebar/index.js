@@ -25,7 +25,7 @@ const Sidebar = (props) => {
                     <span>About-Us</span>
                 </div>
                 <div className='profileImage'>
-                    <img src={require("../../Data/BlogPostImages/phototwo.jpg")} alt='post image' />
+                    <img src={require("../../Data/BlogPostImages/photosix.jpg")} alt='post image' />
                 </div>
                 <div className='cardBody'>
                     <p className='PersonalBio'>Meh synth Schlitz, tempor duis single-origin coffee ea
