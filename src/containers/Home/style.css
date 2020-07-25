@@ -1,3 +1,12 @@
 .galaryPost{
-    /* justify-content: space-between; */
+    margin: 0;
+}
+
+.galaryPost div{
+    width: 100%;
+}
+
+.galaryPost div img{
+    width: 100%;
+    object-fit: cover;
 }
