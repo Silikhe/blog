@@ -10,3 +10,19 @@
     min-height: 70%;
     object-fit: cover;
 }
+
+.HomeContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.postImageWrapper{
+    height: 450px;
+    overflow: hidden;
+}
+
+.postImageWrapper{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
