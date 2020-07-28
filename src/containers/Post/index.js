@@ -11,7 +11,6 @@ import React from 'react'
 **/
 
 const Post = (props) => {
-    console.log(props)
     return (
         <section className='container'>
             <BlogPost {...props}/>
